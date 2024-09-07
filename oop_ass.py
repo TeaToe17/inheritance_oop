@@ -54,6 +54,9 @@ class ReferenceBook(Book):
         super().__init__(*args)
         self.__reference_section: str = reference_section
 
+    def issue(self):
+        raise Exception("This is a reference book and cannot be issued")
+
     def __str__(self) -> str:
         return (f"{super().__str__()}, "
                 f"Reference Section: {self.__reference_section}")
